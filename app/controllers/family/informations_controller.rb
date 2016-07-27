@@ -4,7 +4,7 @@ class Family::InformationsController < ApplicationController
 	end
 
 	def upload
-		file_name = "#{Rails.root}/public/documents/#{params[:file]}"
+		file_name = params[:file]
 		if File.exists?(file_name)
 			send_file file_name
 		else

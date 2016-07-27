@@ -1,0 +1,8 @@
+ru:
+  devise:
+    failure:
+      invalid: 'Логин или пароль указаны неверно.'
+      unauthenticated: "Залогинтесь, чтобы продолжить."
+    sessions:
+      signed_in: "Вы успешно авторизованы."
+      signed_out: "Вы разлогинились."

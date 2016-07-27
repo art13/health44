@@ -10,9 +10,9 @@ gem 'paperclip'
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
 
-group :development, :test do
-  gem 'sqlite3'
-end
+# group :development, :test do
+#   gem 'sqlite3'
+# end
 group :production do
 	gem 'pg'
 end
