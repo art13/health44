@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="span12">
+		<div class="hero-unit">
+			<h1>
+				<b><%= @company.title %></b>
+			</h1>
+			<img src="<%= asset_path('logo.png') %>" class="pull-right logo">
+			<%= raw @company.description %>
+		</div>
+	</div>
+</div>
+
+<div class="container splitter">
+	<div class="middle part1 right-border">
+		<img src="assets/baby.jpg">
+		<p><%= @company.departments.find_by_title('Крепыш').title %></p>
+		<a href=<%= baby_main_path %>>
+			<button class="blue">ВОЙТИ</button>
+		</a>
+	</div>
+	<div class="middle part2">
+		<img src="assets/family.jpg">
+		<p><%= @company.departments.find_by_title('Центр здоровья семьи').title %></p>
+		<a href=<%= family_main_path %>>
+			<button class="yellow">ВОЙТИ</button>
+		</a>
+	</div> 
+</div>

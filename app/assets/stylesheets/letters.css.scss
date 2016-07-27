@@ -1,0 +1,22 @@
+// Place all the styles related to the Letters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+form {
+	fonr-size: 20px;
+	.controls {
+		input, textarea {
+			width: 300px;
+			margin: 0 auto;
+			font-size: 20px;
+		}
+	}
+	label.control-label {
+		text-align: center !important;
+		font-size: 20px;
+	//	font-weight: bold;
+	}
+	#message {
+		text-align: center;
+		color: red;
+	}
+}

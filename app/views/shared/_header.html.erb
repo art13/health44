@@ -1,0 +1,20 @@
+<header>
+	<div class="container">
+		<div class="span12">
+			<div class="row">
+				<div class="span5">
+					<p class="schedule pink-box">
+						<%if @oms.nil? %>	
+							<%= raw Company.first.schedules.first.description %>
+						<% else %>
+							<%= raw Company.first.schedules.last.description %>
+						<% end %>
+					</p>
+				</div>
+				<div class="span3 offset4">
+					<a href="<%= eval("#{@namespace}_contacts_path") %>"><button id="contacts" class="<%= @namespace == 'baby' ? 'red' : 'yellow' %>">КОНТАКТЫ</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

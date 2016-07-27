@@ -1,0 +1,38 @@
+<nav>
+	<div class="container">
+		<div class="span12">
+			<ul class="nav nav-pills">
+				<li>
+					<a href="<%= root_path %>">Главная</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_main_path") %>">ОМС</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_about_path") %>">О клинике</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_informations_path") %>">Юр.информация</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_workers_path") %>">Персонал</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_services_path") %>">Услуги</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_articles_path") %>">Статьи</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_partners_path") %>">Партнеры</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_contacts_path") %>">Контакты</a>
+				</li>
+				<li>
+					<a href="<%= eval("#{@namespace}_discounts_path") %>">Акции</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

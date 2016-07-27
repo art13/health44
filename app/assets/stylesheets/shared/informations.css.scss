@@ -1,0 +1,47 @@
+.tabbable ul li a {
+	font-size: 16px;
+}
+.licenses {
+	text-align: center;
+}
+ol.documents li {
+	font-size: 16px;
+	margin-left: 10px;
+}
+.req {
+	margin-left: 10px;
+	h6 {
+		font-size: 16px;
+	}
+	p {
+		font-size: 16px;
+	}
+	div {
+		margin-top: 30px;
+	}
+}
+
+.infodoc {
+	margin-left: 10px;
+	min-height: 400px;
+
+	h3 {
+		font-family: Helvetic Light;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.dep {
+		padding-top: 30px;
+		font-size: 16px;
+		font-family: Helvetic Light;
+		h6 {
+			font-family: Helvetic Medium;
+			font-size: 16px;
+		}
+	}
+}

@@ -1,0 +1,142 @@
+<%= render :partial => 'shared/header' %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Юр.информация</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+
+<div class="bot-border infodoc">
+	<div class="container">
+		<div class="span12">
+			<div class="tabbable"> <!-- Only required for left/right tabs -->
+			  	<ul class="nav nav-tabs">
+			    	<li class="active"><a href="#tab1" data-toggle="tab">Законы</a></li>
+			    	<li><a href="#tab2" data-toggle="tab">Лицензии</a></li>
+			    	<li><a href="#tab3" data-toggle="tab">Реквизиты</a></li>
+			    	<li><a href="#tab4" data-toggle="tab">Контролирующие организации</a></li>
+            <li><a href="#tab5" data-toggle="tab">Договора</a></li>
+            <li><a href="#tab6" data-toggle="tab">Прочее</a></li>
+			  	</ul>
+			  	<div class="tab-content">
+
+			    	<div class="tab-pane active" id="tab1">
+			    		<ol class="documents">
+			    			<li>
+			      				<%= link_to "Закон о защите прав потребителя", eval("#{@namespace}_upload_path(:file => \"Consumer's law.pdf\")") %>
+		      				</li>
+		      				<li>
+			      				<%= link_to "Постановление правительства №1006", eval("#{@namespace}_upload_path(:file => \"Goverment statement 1006.doc\")") %>
+		      				</li>
+		      				<li>
+			      				<%= link_to "Федеральный закон №152", eval("#{@namespace}_upload_path(:file => \"FZ-152.rtf\")") %>
+		      				</li>
+		      				<li>
+			      				<%= link_to "Федеральный закон №323", eval("#{@namespace}_upload_path(:file => \"FZ-323.rtf\")") %>
+		      				</li>
+									<li><%= link_to "Федеральный закон №326", eval("#{@namespace}_upload_path(:file =>'fz_326_omf.pdf')")%></li>
+	      				</ol>
+			    	</div>
+
+			    	<div class="tab-pane" id="tab2">
+			      		<div class="licenses">
+			      			<% 3.times.each do |i| %>
+			      				<%= image_tag "/license/#{i+1}.jpg", :size => "275x275" %>
+			      			<% end %>
+						<% 5.times.each do |i|%>
+							<%= image_tag "/license/#{i+4}.jpeg", :size => "275x275" %>
+						<%end%>
+			      		</div>
+			    	</div>
+
+			    	<div class="tab-pane" id="tab3">
+			      		<div class="req">
+			      			<h3>
+				      			Общество с ограниченной ответственностью «Гинеколог и Я»
+				      		</h3>
+				      		<p>
+				      			 Действует на основании лицензии № ЛО-44-00-000670 от 15 октября 2014 года , выданной Департаментом здравоохранения Костромской области, расположенного по адресу: 156000 г.Кострома Сенной переулок дом 8. Тел.(4942)37-34-32, 35-13-34
+				      		</p>
+				      		<div>
+				      			<h6>Генеральный директор:</h6>
+								<p>Карташова Ирина Валерьевна, действующая на основании Устава</p>
+				      		</div>
+				      		<div>
+				      			<h6>Юридический адрес:</h6>
+								<p>156000 г. Кострома, переулок Сенной, дом 8 		тел./ факс(4942) 37-15-14</p>
+				      		</div>
+				      		<div>
+				      			<h6>Фактический адрес:</h6>
+								<p>156000 г. Кострома, переулок Сенной, дом 8         тел./ факс(4942) 37-15-14</p>
+				      		</div>
+				      		<div>
+				      			<h6>Банковские реквизиты:</h6>
+								<p>
+									ИНН 4401026162<br/>                                          
+									ОГРН 1024400517173<br/>                                      
+									Р/с 40702810700000000569<br/>                      
+									Кор. счет 30101810200000000720<br/>                     
+									БИК 043469720<br/>
+			      				</p>
+			      			</div>
+			      		</div>
+			    	</div>
+
+			    	<div class="tab-pane" id="tab4">
+		      			<h3>Уважаемые пациенты!</h3>
+			      		<p>
+							Если у Вас возникли претензии или неразрешимые вопросы по оказанию медицинских услуг, Вы можете обратиться в следующие вышестоящие органы:
+						</p>
+
+						<div class="dep">
+							<h6>Департамент Здравоохранения Костромской области</h6>
+							Адрес: 156029,г. Кострома, ул. Свердлова, 129. 
+							Телефон:  (4942) 31-14-69
+						</div>
+
+						<div class="dep">
+							<h6>Территориальный орган Федеральной  службы по надзору в сфере здравоохранения по Костромской области</h6>
+							Адрес: г. Кострома, ул. Советская, д.107-а, 2 этаж
+							Телефон:  (4942) 42-15-00
+						</div>
+
+						<div class="dep">
+							<h6>Управление Федеральной службы по надзору в сфере защиты прав потребителей и благополучия человека по Костромской области</h6>
+							Адрес: 156005, г. Кострома, бульвар Петрковского, д.5
+							Телефоны:  (4942) 42-69-49
+							телефон горячей линии 8-4249-42-34-01
+						</div>
+						<div class="dep">
+							<h6>Территориальный фонд обязательного медицинского страхования Костромской области</h6>
+							156013, г. Кострома, Ленина ул., д.20, оф. 300
+							Тел/факс: (4942) 31-59-09 
+							E-mail: info@tfomsko.ru
+							График работы: с 8:30 до 17:30, перерыв с 12:30 до 13:30.
+						</div>
+		    	</div>
+
+          <div class="tab-pane" id="tab5">
+          	<ol class="documents">
+              <li>
+                <%= link_to "Договор на оказание медицинских услуг", eval("#{@namespace}_upload_path(:file => \"Contract.doc\")") %>
+              </li>
+            </ol>
+          </div>
+
+          <div class="tab-pane" id="tab6">
+          	<ol class="documents">
+              <li>
+                <%= link_to "Правила оказания платных медицинских услуг", eval("#{@namespace}_upload_path(:file => \"rules_for_serving_payment_services.docx\")") %>
+              </li>
+            </ol>
+          </div>
+
+		  	</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>

@@ -1,0 +1,187 @@
+ru:
+  administrators: Администрация
+  doctors: Врачи
+  med_ses: 'Медицинские сёстры'
+  registrs: Регистраторы
+  operators: Операторы
+  sender_name: Ваше имя
+  sender_age: Ваш возраст
+  sender_email: Ваша эл.поста
+  body: Что Вас беспокоит?
+  your_letter_was_successfully_delivered: Ваше письмо успешно доставлено
+  additional_settings: Дополнительные настройки
+  views:
+    pagination:
+      next: "След. &#8594;"
+      last: "Последняя"
+      previous: "&#8592; Пред."
+      first: "Начало"
+  activerecord:
+    models:
+      admin_user:
+        one: Администратор
+        other: Администраторы
+      company:
+        one: Компания
+        other: Компании
+      bank:
+        one: Банк
+        other: Банки
+      department:
+        one: Отделение
+        other: Отделения
+      address:
+        one: Адрес
+        other: Адреса
+      phone:
+        one: Телефон
+        other: Телефоны
+      article:
+        one: Статья
+        other: Статьи
+      grade:
+        one: Квалификация
+        other: Квалификации
+      worker:
+        one: Сотрудник
+        other: Персонал
+      service:
+        one: Услуга
+        other: Услуги
+      partner:
+        one: Партнер
+        other: Партнеры
+      letter:
+        one: Письмо
+        other: Письма
+      schedule:
+        one: Режим работы
+        other: Режим работы
+    attributes:
+      admin_user:
+        email: Электронная почта
+        password : Пароль
+        password_confirmation: Подтверждение пароля
+      company:
+        title: Название
+        description: Описание
+        address: Адрес
+        email: Электронная почта
+        postcode: Индекс
+        tin: ИНН
+        psrn: ОГРН
+        account: Расчетный счет
+      bank:
+        title: Название
+        bic: БИК
+        company: Компания
+        account: Корреспондентский счет
+      department:
+        title: Название
+        description: Описание
+        company: Компания
+      phone:
+        number: Номер
+        multichannel: Мультиканальный
+        company: Компания
+      address:
+        location: Расположение
+        longitude: Долгота
+        latitude: Широта
+        company: Компания
+      article:
+        title: Название
+        body: Содержание
+        department: Отделение
+        created_at: Создана
+        updated_at: Изменена
+      grade:
+        title: Название
+      worker:
+        w_types: Разделы
+        firstname: Имя
+        lastname: Фамилия
+        secondname: Отчество
+        experience: Стаж
+        information: Дополнительно
+        photo: Фото
+        grade: Квалификация
+        departments: Отделения
+        created_at: Добавлен
+        updated_at: Изменен
+      service:
+        title: Название
+        description: Описание
+        departments: Отделения
+        creted_at: Добавлена
+        updated_at: Изменена
+      partner:
+        title: Название
+        body: Описание
+      letter:
+        sender_name: Имя отправителя
+        sender_age: Возраст отправителя
+        sender_email: Адрес эл.почты
+        body: Содержание
+    errors:
+      messages:
+      models:
+        company:
+          attributes:
+            title: 
+              blank: "%{attribute} компании не может быть пустым. Укажите %{attribute}!"
+            description:
+              blank: "%{attribute} компании не может быть пустым. Укажите %{attribute}!"
+            address:
+              blank: "%{attribute} компании не может быть пустым. Укажите %{attribute}!"
+        bank:
+          attributes:
+            title:
+              blank: "%{attribute} банка не может быть пустым. Укажите %{attribute}!"
+        department:
+          attributes:
+            title:
+              blank: "%{attribute} отделения не может быть пустым. Укажите %{attribute}!"
+        phone:
+          attributes:
+            number:
+              blank: "%{attribute} телефона не может быть пустым. Укажите %{attribute}!"
+        address:
+          attributes:
+            location:
+              blank: "%{attribute} телефона не может быть пустым. Укажите %{attribute}!"
+        article:
+          attributes:
+            title:
+              blank: "%{attribute} статьи не может быть пустым. Укажите %{attribute}!"
+            body:
+              blank: "%{attribute} статьи не может быть пустым. Укажите %{attribute}!"
+        grade:
+          attributes:
+            title: 
+              blank: "%{attribute} квалификации не может быть пустым. Укажите %{attribute}!"
+        worker:
+          attributes:
+            firstname: 
+              blank: "%{attribute} сотрудника не может быть пустым. Укажите %{attribute}!"
+            lastname: 
+              blank: "%{attribute} сотрудника не может быть пустым. Укажите %{attribute}!"
+            secondname: 
+              blank: "%{attribute} сотрудника не может быть пустым. Укажите %{attribute}!"
+            photo: 
+              blank: "%{attribute} сотрудника не может быть пустым. Укажите %{attribute}!"
+        service:
+          attributes:
+            title: 
+              blank: "%{attribute} услуги не может быть пустым. Укажите %{attribute}!"
+        partner:
+          attributes:
+            title: 
+              blank: "партнера не может быть пустым. Укажите %{attribute}!"
+            body: 
+              blank: "%партнера не может быть пустым. Укажите %{attribute}!"
+        letter:
+          attributes:
+            body: 
+              blank: "письма не может быть пустым. Укажите %{attribute}!"
+

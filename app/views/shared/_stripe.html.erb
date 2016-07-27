@@ -1,0 +1,7 @@
+<div class="stripe <%= @namespace == 'baby' ? 'blue' : 'green' %>">
+	<div class="container">
+		<div class="span3 <%= @namespace%>-light">
+			<%= yield :stripe %>
+		</div>
+	</div>
+</div>

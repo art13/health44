@@ -1,0 +1,26 @@
+<%= render :partial => 'shared/header' %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Партнёры</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+
+<div class="bot-border">
+	<div class="container">
+		<div class="span12">
+			<% @partners.each do |partner| %>
+				<% unless @namespace == "baby" && partner.id == 2%>
+					<div class="partner">
+						<h3><%= partner.title %></h3>
+						<p><%= raw  partner.body %></p>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>

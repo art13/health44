@@ -1,0 +1,11 @@
+<% unless @letter.new_record? %>
+	$('#message').empty().append("<%= I18n.t(flash[:notice]) %>");
+	$('#letterForm input, #letterForm textarea').not('input[type=submit]').val('');
+	setTimeout(function() {$('#letterForm').modal('hide');}, 2000);
+<% else %>
+	$('#message').empty().append('<ul>');
+	<% flash[:error].each do |error| %>
+		$('#message').append("<li><%= error %></li>");
+	<% end %>
+	$('#message').append('</ul>');
+<% end %>

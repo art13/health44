@@ -1,0 +1,2 @@
+module Baby::ArticlesHelper
+end

@@ -1,0 +1,68 @@
+<%= render :partial => "shared/header" %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Услуги</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+
+<div class="bot-border services">
+	<div class="container">
+		<div class="span12">
+			<div class="tabbable tabs-left"> 
+			  <ul class="nav nav-tabs">
+			  	<% @categories.each_with_index do |category, i| %>
+			    	<li class="<%= i==0 ? 'active' : '' %>"><a href="#tab<%= i+1 %>" data-toggle="tab"><%= category.title %></a></li>
+			    <% end unless @categories.nil? %>			    
+			  </ul>
+			  <div class="tab-content">
+			    <% @categories.each_with_index do |category, i| %>
+			    	<div class="tab-pane <%= i==0 ? 'active' : '' %>" id="tab<%= i+1 %>">
+			    	  <% unless category.description.nil? or category.description.empty? %>
+			    	  	<div class="descript"><%= raw category.description %></div>
+		    	  	  <% end %>
+				      <table class="table table-bordered">
+				      	<thead>
+				      		<tr>
+				      			<th colspan="2">Название услуги</th>
+				      			<th>Стоимость</th>
+				      			<th>Срок выполнения</th>
+				      		</tr>
+				      	</thead>
+				      	<tbody>
+				      		<% category.services.each do |service| %>
+				      			<tr>
+				      				<% if service.variants.empty? %>
+				      					<td colspan="2"><%= service.title %></td>
+				      					<td><%= service.price %> руб.</td>
+				      					<td><%= service.duration %></td>
+						      			</tr>
+				      				<% else %>
+				      					<td rowspan="<%= service.variants.size+1%>"><%= service.title %></td>
+				      					</tr>
+				      					<% f = true %>
+				      					<% service.variants.each do |variant| %>
+				      						<tr>
+				      							<td ><%= variant.title %></td>
+				      							<td><%= variant.price %> руб.</td>
+				      							<% if f %>
+				      								<td rowspan="<%= service.variants.size %>"><%= service.duration %></td>
+				      								<% f = false %>
+				      							<% end %>
+				      						</tr>
+				      					<% end %>
+				      				<% end %>
+				      		<% end unless category.services.nil? %>
+				      	</tbody>
+				      </table>
+				    </div>
+			    <% end unless @categories.nil? %>
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>

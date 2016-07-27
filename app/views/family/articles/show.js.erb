@@ -1,0 +1,3 @@
+$("#content").html("<%= escape_javascript(render :partial => 'shared/articles/content', :locals => {article: @article}) %>");
+$(".art_list a").css("color","black");
+$(".art_list a[data-index=<%= @article.id %>]").css("color","rgba(0,85,128,1)");

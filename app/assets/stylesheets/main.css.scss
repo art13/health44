@@ -1,0 +1,73 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	height: 100%;
+	width: 100%;
+	.hero-unit {
+		margin-bottom: 0;
+	h1{margin-bottom:10px;}
+	}
+	font-family:Helvetic Medium;
+}
+.middle {
+	text-align: center;
+}
+.right-border {
+	border-right: 1px solid rgba(144,144,144,0.3);
+	margin-left: -1px;
+}
+.part1 {
+	width: 50%;
+	margin-left: -20px;
+	padding: 60px 0;
+	display: inline-block;
+	img {
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+	}
+	p {
+		margin: 30px auto;
+		width: 400px;
+		font-size: 20px;
+		color: rgba(82,77,77,1);
+	}
+	button {
+		color: white;
+		width: 200px;
+		height: 50px;
+		border: 2px solid white;
+		font-size: 26px;
+		font-family: 'boblic';
+	}
+}
+.splitter {
+	padding-left: 100px;
+}
+.part2 {
+	width: 50%;
+	padding: 60px 0;
+	display: inline-block;
+	margin-left: -4px;
+	img {
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+	}
+	p {
+		margin: 30px auto;
+		width: 400px;
+		font-size: 20px;
+		color: rgba(82,77,77,1);
+	}
+	button {
+		color: white;
+		width: 200px;
+		height: 50px;
+		border: 2px solid white;
+		font-size: 26px;
+		font-family: 'boblic';
+	}
+}
+

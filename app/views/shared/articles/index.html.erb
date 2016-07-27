@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/header' %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Статьи</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+
+<div class="bot-border">
+	<div class="art_list">
+		<div class="container">
+			<div class="span9">
+				<% @articles.each do |article| %>
+					<h3><%= link_to(article.title, eval("#{@namespace}_article_path(article)"),{ :remote => true, :data => {:index => article.id} }) %></h3>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bot-border">
+	<div class="container">
+		<div class="span12">
+			<div id="content">
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>

@@ -1,0 +1,53 @@
+<footer>
+	<div class="container">
+		<div class="span3">
+			<h2>Контакты</h2>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="span3">
+			<p class="phone">
+				<%@phones = @company.phones.first(2)%>
+				<% phone = @phones[0]; phone_parts = phone.number.split(',') %>
+				<% if phone_parts.size < 2%>
+                                        <% phone_parts = phone.number.split(' ')%>
+                                <% end %>
+				<%if phone_parts.size > 1%>
+                                        <label class="code"><b><%= phone_parts.first %></b></label>
+                                <% end%>
+				<label style ="font-size:30px; <%= 'margin-top: 1em;' unless phone_parts.size >1 %>"><b><%= phone_parts.last %></b></label>
+				<% if phone.multichannel %>
+					<label class="kind">многоканальный</label>
+				<% end %>
+			</p>
+		</div>
+
+		<div class="span6">
+			<div class="feedback">
+				<button type="button" data-toggle="modal" data-target="#letterForm">НАПИСАТЬ НАМ ПИСЬМО</button>
+
+				<p class="address"><%= @company.addresses.first.location %></p>
+			</div>
+		</div>
+
+		<div class="span3 offset9">
+			<p class="fax">
+				
+				<% phone = @phones[1]; phone_parts = phone.number.split(",")  %>
+				<% if phone_parts.size < 2%>
+					<% phone_parts = phone.number.split(' ')%>
+				<% end %>
+				<%if phone_parts.size > 1%>
+					<label class="code"><b><%= phone_parts.first %></b></label>
+				<% end%>
+				<label style ="font-size:30px; <%= 'margin-top: 1em;' unless phone_parts.size >1 %>"><b><%= phone_parts.last %></b></label>
+				<% if phone.multichannel %>
+					<label class="kind">многоканальный</label>
+				<% end %>
+			</p>
+		</div>
+	</div>
+
+	<%= render :partial => 'shared/letter_dialog' %>
+</footer>

@@ -1,0 +1,113 @@
+body, html {
+	width: 100%;
+	height: 100%;
+}
+.red {
+	background: rgba(245,46,20,1);
+}
+.blue {
+	background: rgba(55,147,240,1);
+}
+.green {
+	background: rgba(49,173,53,1);
+}
+.yellow {
+	background: rgba(245,155,10,1);
+}
+header {
+	margin: 20px 0;
+	padding: 10px 0;
+	.pink-box {
+		background: pink;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+	}
+	button {
+		padding: 20px;
+		width: 100%;
+		border: none;
+		font-size: 26px;
+		color: rgba(255,255,255,1);
+		border: 2px solid rgba(255,255,255,1);
+	}
+}
+nav { 
+	ul {
+		float: right;
+		font-size: 20px;
+		li a {  font-family: Helvetic Light;
+			color: rgba(51,51,51,1);
+		}
+		li.active_tab a {
+			color: rgba(255,0,0,1);
+		}
+	}
+}
+.stripe {
+	width: 100%;
+	.span3 {
+		//background: rgba(51,51,51,1);
+	}
+	h3 {    
+		width: 100%;
+		text-align: center;
+		color: rgba(255,255,255,1);
+	}
+}
+footer {
+	margin: 20px 0;
+	h2 {
+		margin: 20px 0;
+		font-size: 30px;
+	//	color: rgba(110,110,110,1);
+	}
+	.offset9 {
+		margin-left: -5px;
+	}
+	.feedback {
+		text-align: center;
+		width: 100%;
+		button {
+			padding: 20px;
+			width: 400px;
+			border: none;
+			font-size: 26px;
+			color: rgba(255,255,255,1);
+			border: 2px solid rgba(255,255,255,1);
+			background: gray;
+		}
+		p {
+			margin: 0 auto;
+			padding: 20px;
+			//color: rgba(110,110,110,1);
+			width: 400px;
+			font-size: 22px;
+		}
+	}
+	.code {
+		margin: 10px 0;
+		width: 100%;
+		font-size: 30px;
+	}
+	.numbr {
+		margin: 30px 0;
+		width: 100%;
+		font-size: 20px;
+	}
+	.kind {
+		margin: 30px 0;
+		width: 100%;
+		font-size: 20px;
+		//color: rgba(110,110,110,1);
+	}
+	.fax {
+		text-align: right;
+	}
+}
+.schedule {
+	margin: 0;
+	width: 100%;
+	font-size: 20px;
+	line-height: 100%;
+}

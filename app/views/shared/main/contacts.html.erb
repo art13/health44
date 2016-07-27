@@ -1,0 +1,82 @@
+<%= content_for :head do %>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<% end %>
+
+<%= render :partial => "shared/header" %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Контакты</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+<div class="bot-border">
+	<div class="container">
+		<div class="span12">
+			<div id="map" style="border: 3px solid <%= @namespace == 'baby' ? 'rgba(0,0,255,1)' : 'rgba(60,163,23,1)' %>"></div>
+			<p class="middle"><%= @company.addresses.first.location %></p>
+		</div>
+
+		<div class="span12">
+			<div class="phones">
+				<h3>Телефоны</h3>
+				<% @company.phones.each do |phone| %>
+					<p>
+						<% if phone.number.split(",").size > 1%>
+							<% phone_parts = phone.number.split(",") %>
+							<% phone_parts.each do |part|%>
+								<label class = " code"><b><%= part%></b></label>
+								 <% if phone.multichannel %>
+		                                                         <label class="kind">многоканальный</label>
+                		                                 <% end %>
+							<br />
+							<% end%>
+						<% else %>							
+							<label class="code"><b><%= phone.number %></b></label>
+							<% if phone.multichannel %>
+								<label class="kind">многоканальный</label>
+							<% end %>
+						<% end %>
+					</p>
+				<% end %>
+			</div>
+		</div>
+
+		<div class="span12">
+			<div class="phones">
+				<h3>Режим работы</h3>
+				<%# @company.schedules.each do |schedule| %>
+					<p class="schedule">
+						<%= raw @company.schedules.first.description %>
+					</p>
+				<%# end %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>
+
+<script>
+	var myMap, 
+        myPlacemark;
+
+    function init(){ 
+        myMap = new ymaps.Map ("map", {
+            center: [<%= @company.addresses.first.latitude %>, <%= @company.addresses.first.longitude %>],
+            zoom: 16,
+            behaviors: ['ruler', 'scrollZoom']
+        }); 
+        
+        myPlacemark = new ymaps.Placemark([<%= @company.addresses.first.latitude %>, <%= @company.addresses.first.longitude %>], {
+            hintContent: 'ГинекологиЯ',
+            balloonContent: 'Крепыш, Центр здоровья семьи'
+        });
+        
+        myMap.geoObjects.add(myPlacemark);
+        myMap.controls.add('zoomControl', {right : '5px'});
+        myMap.controls.add('mapTools');
+    }
+    ymaps.ready(init);
+</script>

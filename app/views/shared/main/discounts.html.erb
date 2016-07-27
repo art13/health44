@@ -1,0 +1,41 @@
+
+<%= render :partial => 'shared/header' %>
+
+<%= render :partial => 'shared/navbar' %>
+
+<%= content_for :stripe do %>
+	<h3>Акции</h3>
+<% end %>
+
+<%= render :partial => 'shared/stripe' %>
+
+<div class="bot-border">
+	<div class="container">
+		<div class="span12">
+			<ul>
+				<% @discounts.each do |discount| %>
+					<% if  @namespace == "baby"%>
+					     <% if discount.id == 6%>
+						<li class="discount">	
+							<h3><%= discount.title %></h3>
+							<p><span class="cri">Условия применения акции:</span> <%= discount.condition %></p>
+						</li>
+					     <% end %>
+					<% else %>
+						<li class="discount">
+                                                	<h3><%= discount.title %></h3>
+                                                	<p><span class="cri">Условия применеия акции:</span> <%= discount.condition %></p>
+                                        	</li>
+
+					<% end%>
+				<% end unless @discounts.nil? %>
+			</ul>
+
+			<div class="disclaimer">
+				<h3><b>В течение года действуют периодические скидки - на приемы различных специалистов, на лабораторные услуги, на скрининги для беременных  – следите за информацией на нашем сайте.</b></h3>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%= render :partial => 'shared/footer' %>

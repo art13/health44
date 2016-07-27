@@ -1,0 +1,33 @@
+.services {
+	min-height: 500px;
+	.nav-tabs li a {
+		font-size: 20px;
+		font-famaly: Helvetic Light;
+	}
+	th {
+		font-weight:normal;
+		text-align: center;
+		font-size: 20px;
+		
+	}
+	td {
+		vertical-align: middle;
+		font-size: 16px;
+		font-family: Helvetic Light;
+	}
+	tr td {
+		text-align: left;
+	}
+	tr td:nth-child(2) {
+		text-align: right;
+	}
+	tr td:nth-child(3) {
+		text-align: center;
+	}
+
+	.descript {
+	    padding: 20px 0;
+	    font-size: 16px;
+	    font-family: Helvetic Light;
+	}
+}

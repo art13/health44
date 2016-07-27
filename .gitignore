@@ -1,0 +1,8 @@
+public/system
+public/photos
+db/*.sqlite3
+tmp/
+log/
+test/
+doc/
+config/database.yml
