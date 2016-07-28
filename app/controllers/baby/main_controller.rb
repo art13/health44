@@ -1,5 +1,6 @@
 class Baby::MainController < Baby::BaseController
 	def index
+		@docs = Document.oms
 		@oms = true
 		render :template => 'shared/main/index'
 	end

@@ -24,31 +24,17 @@
 
 			    	<div class="tab-pane active" id="tab1">
 			    		<ol class="documents">
-			    			<li>
-			      				<%= link_to "Закон о защите прав потребителя", eval("#{@namespace}_upload_path(:file => \"Consumer's law.pdf\")") %>
-		      				</li>
-		      				<li>
-			      				<%= link_to "Постановление правительства №1006", eval("#{@namespace}_upload_path(:file => \"Goverment statement 1006.doc\")") %>
-		      				</li>
-		      				<li>
-			      				<%= link_to "Федеральный закон №152", eval("#{@namespace}_upload_path(:file => \"FZ-152.rtf\")") %>
-		      				</li>
-		      				<li>
-			      				<%= link_to "Федеральный закон №323", eval("#{@namespace}_upload_path(:file => \"FZ-323.rtf\")") %>
-		      				</li>
-									<li><%= link_to "Федеральный закон №326", eval("#{@namespace}_upload_path(:file =>'fz_326_omf.pdf')")%></li>
+			    			<% @lows.each do |doc| %>
+			    				<li><%= link_to doc.name, eval("#{@namespace}_upload_path(:file => '#{doc.document.url.split('?').first}')") %> </li>
+			    			<% end %>
 	      				</ol>
 			    	</div>
 
 			    	<div class="tab-pane" id="tab2">
 			      		<div class="licenses">
-						<% 3.times.each do |i|%>
-                                                        <%= image_tag "/license/#{i+1}.jpg", :size => "275x275" %>
-                                                <%end%>
-
-						<% 5.times.each do |i|%>
-							<%= image_tag "/license/#{i+1}.jpeg", :size => "275x275" %>
-						<%end%>
+				      		<% @licenses.each do |license| %>
+				      			<%= image_tag license.document.url, :size => '275x275'%>
+				      		<% end %>
 			      		</div>
 			    	</div>
 
@@ -120,17 +106,17 @@
 
           <div class="tab-pane" id="tab5">
           	<ol class="documents">
-              <li>
-                <%= link_to "Договор на оказание медицинских услуг", eval("#{@namespace}_upload_path(:file => \"dogovor_med.doc\")") %>
-              </li>
+             	<% @contracts.each do |doc| %>
+			    	<li><%= link_to doc.name, eval("#{@namespace}_upload_path(:file => '#{doc.document.url.split('?').first}')") %> </li>
+			   	<% end %>
             </ol>
           </div>
 
           <div class="tab-pane" id="tab6">
           	<ol class="documents">
-              <li>
-                <%= link_to "Правила оказания платных медицинских услуг", eval("#{@namespace}_upload_path(:file => \"rules_for_serving_payment_services.docx\")") %>
-              </li>
+              	<% @others.each do |doc| %>
+			    	<li><%= link_to doc.name, eval("#{@namespace}_upload_path(:file => '#{doc.document.url.split('?').first}')") %> </li>
+			   	<% end %>
             </ol>
           </div>
 

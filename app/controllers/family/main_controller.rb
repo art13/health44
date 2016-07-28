@@ -1,6 +1,7 @@
 class Family::MainController < Family::BaseController
 	def index
 		@oms = true
+		@docs = Document.oms
 		render :template => 'shared/main/index'
 	end
 

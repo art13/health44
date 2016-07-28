@@ -4,6 +4,14 @@ class ApplicationController < ActionController::Base
   before_filter :find_company, :get_namespace
 
   private
+  
+	def get_docs
+	  	@licenses = Document.licenses
+		@contracts = Document.contracts
+		@lows = Document.lows
+		@others = Document.others
+	end
+
   	def find_company
   		@company = Company.find_by_title("ООО “ГИНЕКОЛОГ и Я”")
   	end

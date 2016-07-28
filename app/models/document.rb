@@ -1,10 +1,13 @@
 class Document < ActiveRecord::Base
-	scope :active, -> {where(:active => true)}
-	scope :lows, -> {where(:page_type => 1)}
-	scope :licenses, -> {where(:page_type => 2)}
-	scope :contracts, -> {where(:page_type => 3)}
-	scope :others, -> {where(:page_type => 4)}
-	scope :oms, -> {where(:page_type => 5)}
+	
+	default_scope order('priority DESC')
+
+	scope :active, -> {where(:active => true) }
+	scope :lows, -> {where(:page_type => 1).active }
+	scope :licenses, -> {where(:page_type => 2).active }
+	scope :contracts, -> {where(:page_type => 3).active	}
+	scope :others, -> {where(:page_type => 4).active }
+	scope :oms, -> {where(:page_type => 5).active }
 
 	validates :name, :page_type, :presence => true
 	
