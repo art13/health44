@@ -1,9 +1,9 @@
-root = "/home/komar/apps/gynecologist/current"
+root = "/home/komar/apps/health44/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-listen "/tmp/unicorn.gynecologist.sock"
+listen "/tmp/unicorn.health44.sock"
 worker_processes 2
 timeout 30
