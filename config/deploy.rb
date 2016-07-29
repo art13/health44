@@ -4,13 +4,13 @@ require "bundler/capistrano"
 
 server "91.201.53.197", :web, :db, :app, primary: true
 
-set :application, 'gynecologist'
+set :application, 'health44'
 set :user, "komar"
 set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 set :scm, "git"
-set :repository, "git@github.com:KonstOrVar/#{application}.git"
+set :repository, "git@github.com:art13/#{application}.git"
 set :branch, "master"
 #set :repo_url, 'git@github.com:KonstOrVar/#{application}.git'
 
