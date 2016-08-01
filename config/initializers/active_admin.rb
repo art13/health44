@@ -189,7 +189,10 @@ ActiveAdmin.setup do |config|
   #     admin.download_links = [:xml, :pdf]
   #
   end
-
+  # config.after_initialize do
+  #   require 'active_support/i18n'
+  #     I18n.load_path += Dir[File.expand_path('../active_admin/locales/*.yml', __FILE__)]
+  # end
 
   # == Pagination
   #

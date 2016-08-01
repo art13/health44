@@ -30,7 +30,7 @@ ru:
     has_many_new: "Добавить %{model}"
     has_many_delete: "Убрать"
     has_many_remove: "Удалить"
-    search_filter: Искать по 
+    search: Искать по 
     filter: Фильтровать
     clear: Очистить
     filters:

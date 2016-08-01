@@ -1,6 +1,4 @@
-
 ActiveAdmin.register Document do 
-	# actions :all, :except => [:edit]
 	collection_values = [[I18n.t('lows'), 1],[I18n.t('licenses'), 2],[I18n.t('contracts'),3],[I18n.t('others'),4],[I18n.t('oms'), 5]]
 	config.batch_actions = false
 	filter :name, :label => I18n.t('filter_name')
