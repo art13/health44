@@ -30,6 +30,9 @@ ru:
     has_many_new: "Добавить %{model}"
     has_many_delete: "Убрать"
     has_many_remove: "Удалить"
+    search: Искать по 
+    filter: Фильтровать
+    clear: Очистить
     filters:
       buttons:
         filter: "Фильтровать"
@@ -44,6 +47,7 @@ ru:
     main_content: "Создайте %{model}#main_content для отображения содержимого."
     logout: "Выйти"
     powered_by: "Powered by %{active_admin} %{version}"
+    search_filter: Поиск 
     sidebars:
       filters: "Фильтры"
     pagination:
