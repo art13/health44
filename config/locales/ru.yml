@@ -16,6 +16,9 @@ ru:
   contracts: Договоры
   others: Прочее
   oms: ОМС
+  w_types: Разделы
+  personal: Персонал
+  workers: Сотрудники
   documents_form: Добавление\Изменение файла
   views:
     pagination:
@@ -25,6 +28,9 @@ ru:
       first: "Начало"
   activerecord:
     models:
+      w_type:
+        one: Раздел
+        other: Разделы
       document:
         one: Файл
         other: Файлы
@@ -71,6 +77,8 @@ ru:
         one: Режим работы
         other: Режим работы
     attributes:
+      w_type:
+        w_type: Название
       document:
         active: Активный
         page_type: Раздел

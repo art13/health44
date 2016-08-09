@@ -1,4 +1,5 @@
 ActiveAdmin.register Worker do
+  menu :parent => I18n.t('personal'), :label => I18n.t('workers'), :priority => 1
   config.batch_actions = false
 
   index do
